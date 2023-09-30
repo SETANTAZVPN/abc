@@ -52,7 +52,7 @@ MYIP=$(curl -sS ipv4.icanhazip.com)
     KYTPROJECT
 }
 KYTPROJECT() {
-    curl -sS https://raw.githubusercontent.com/myridwan/SETANTAZVPN/ipuk/ip >/root/tmp
+    curl -sS https://raw.githubusercontent.com/SETANTAZVPN/izinvps/ipuk/ip >/root/tmp
     data=($(cat /root/tmp | grep -E "^### " | awk '{print $2}'))
     for user in "${data[@]}"; do
         exp=($(grep -E "^### $user" "/root/tmp" | awk '{print $3}'))
