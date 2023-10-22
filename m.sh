@@ -2,7 +2,7 @@
 cek_reg_mode() {
     until [[ $MYIP =~ ^[0-9.]+$ && ${CLIENT_EXISTS} == '1' ]]; do
 
-        CLIENT_EXISTS=$(wget -qO- https://raw.githubusercontent.com/SETANTAZVPN/izinvps/ip | grep -w $MYIP | wc -l)
+        CLIENT_EXISTS=$(wget -qO- https://raw.githubusercontent.com/SETANTAZVPN/izinvps/ipuk/ip | grep -w $MYIP | wc -l)
         if [[ ${CLIENT_EXISTS} == '0' ]]; then
             clear
             echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
